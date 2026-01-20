@@ -139,4 +139,23 @@ fn main() {
     // they can also be used as a placeholder and to indicate the absence of a value
     let empty: () = (); // unit type, represents an empty value
     println!("Empty tuple: {:?}", empty);
+
+    // functions that return empty tuples
+    fn do_nothing() -> () {
+        // this function does nothing and returns an empty tuple    
+    }
+    fn empty_return () {
+        // this function also returns an empty tuple implicitly
+    }
+
+    // Functions
+    // functions are used to encapsulate reusable code
+    // they can take parameters and return values
+    // functions help in organizing code and improving readability
+    // functions are defined using the 'fn' keyword followed by the function name and parentheses
+    // the function body is enclosed in curly braces
+    // functions can have parameters with specified types
+    // functions can return values using the '->' syntax followed by the return type    
+
+    fn 
 }
