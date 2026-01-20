@@ -132,6 +132,11 @@ fn main() {
 
 
     // empty tuple
+    // empty tuples are also known as unit type
+    // empty tuples are used when there is no meaningful value to return
+    // they are represented by (), there are no elements inside, the size is zero
+    // they can be used in functions that do not return any value
+    // they can also be used as a placeholder and to indicate the absence of a value
     let empty: () = (); // unit type, represents an empty value
     println!("Empty tuple: {:?}", empty);
 }
