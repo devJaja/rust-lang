@@ -33,8 +33,52 @@ fn main() {
     // constants are values that cannot be changed and must have a type annotation
     const MAX_POINTS: u32 = 100_000; // constant declaration
     println!("The maximum points are: {}", MAX_POINTS);
-    
-    //primintive data types review
+
+    // primitive data types review
+    // primitive data types are the most basic data types in Rust
+    // - integers
+    // - floating-point numbers
+    // - booleans
+    // - characters
+
+    // integer types
+    let a: u8 = 255; // unsigned 8-bit integer
+    let b: i8 = -128; // signed 8-bit integer
+    let c: u16 = 65_535; // unsigned 16-bit integer
+    let d: i16 = -32_768; // signed 16-bit integer
+    let e: u32 = 4_294_967_295; // unsigned 32-bit integer
+    let f: i32 = -2_147_483_648; // signed 32-bit integer
+    let g: u64 = 18_446_744_073_709_551_615; // unsigned 64-bit integer
+    let h: i64 = -9_223_372_036_854_775_808; // signed 64-bit integer
+
+    println!("Integer values: {}, {}, {}, {}, {}, {}, {}, {}", a, b, c, d, e, f, g, h);
+
+    // floating-point types
+    let float_32: f32 = 3.14; // 32-bit floating point
+    let float_64: f64 = 2.718281828459045; // 64-bit floating point
+    println!("Floating-point values: {}, {}", float_32, float_64);
+
+    // boolean type
+    let is_rust_fun: bool = true; // boolean value
+    let is_math_hard: bool = false; // boolean value
+    println!("Is Rust fun? {}, Is math hard? {}", is_rust_fun, is_math_hard);
+
+    // character type
+    let letter_a: char = 'A'; // character type
+    let emoji_smile: char = '😊'; // character type
+
+    // type alliases
+    // you can create type aliases using the 'type' keyword
+    type Kilometers = i32; // creating a type alias for i32
+    let distance: Kilometers = 100; // using the type alias
+    println!("Distance in kilometers: {}", distance);
+
+    // type conversion
+    let int_value: i32 = 42;
+    let float_value: f64 = int_value as f64; // converting i32 to f64
+    println!("Integer value: {}, Converted float value: {}", int_value, float_value);
+
+    //primitive data types review
     let num : i32 = 5;
     println!("Here is the number : {num}");
     // string
