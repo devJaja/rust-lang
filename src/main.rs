@@ -8,6 +8,15 @@
 
 
 fn main() {
+    // Variables and Mutability
+    // variable is a name that represents a value stored in memory
+    let x: i32 = 10; // immutable variable
+    println!("The value of x is: {}", x);
+    let mut y: i32 = 20; // mutable variable
+    println!("The initial value of y is: {}", y);
+    y = 30; // modifying the mutable variable
+    println!("The modified value of y is: {}", y);
+    
     //primintive data types review
     let num : i32 = 5;
     println!("Here is the number : {:?}", num);
