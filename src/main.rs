@@ -16,7 +16,15 @@ fn main() {
     println!("The initial value of y is: {}", y);
     y = 30; // modifying the mutable variable
     println!("The modified value of y is: {}", y);
-    
+
+
+    // Shadowing
+    let z: i32 = 5; // initial declaration
+    println!("The initial value of z is: {}", z);
+    let z: i32 = z + 10; // shadowing the previous z
+    println!("The shadowed value of z is: {}", z);
+    let z: i32 = z * 2; // shadowing again
+    println!("The shadowed value of z after multiplication is: {}", z);
     //primintive data types review
     let num : i32 = 5;
     println!("Here is the number : {:?}", num);
