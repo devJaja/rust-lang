@@ -155,7 +155,14 @@ fn main() {
     // functions are defined using the 'fn' keyword followed by the function name and parentheses
     // the function body is enclosed in curly braces
     // functions can have parameters with specified types
-    // functions can return values using the '->' syntax followed by the return type    
+    // functions can return values using the '->' syntax followed by the return type   
+    // the naming convention for function is snake case 
+    // parameters in function are also defined like variable
 
-    fn 
-}
+    // difference between expression and statement
+    // statement is an instruction that performs an action but does not return a value
+    // expression is a piece of code that evaluates to a value
+    
+
+    fn main() {
+    }
