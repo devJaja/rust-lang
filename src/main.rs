@@ -89,11 +89,15 @@ fn main() {
     println!("this is the growable array : {}", growable_string);
 
     // arrays
-    let fixed_array: [i32;5] = [1, 2, 3, 4, 5]; // fixed size array
-    let mut matuble_array: [i32;3] = [10, 20, 30]; // mutable fixed size array
-    matuble_array[0] = 100; // modify an element
-    println!("Fixed array: {:?}", fixed_array);
-    println!("Mutable array after modification: {:?}", matuble_array);
+    // arrays have a fixed size and can hold elements of the same type
+    let fixed_size_array: [i32; 3] = [1, 2, 3]; // fixed size array
+    let mut mutable_array: [i32;3] = [10, 20, 30]; // mutable fixed size array
+    mutable_array[0] = 100; // modify an element
+    println!("Fixed array: {:?}", fixed_size_array);
+    println!("Mutable array after modification: {:?}", mutable_array);
+
+    let array2: [i32; 5] = [0; 5]; // array with all elements initialized to 0
+    println!("Array with default values: {:?}", array2);
 
     // vectors
     // unlike arrays, vectors can grow and shrink in size
