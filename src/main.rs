@@ -15,19 +15,28 @@ fn main() {
     let mut y: i32 = 20; // mutable variable
     println!("The initial value of y is: {}", y);
     y = 30; // modifying the mutable variable
-    println!("The modified value of y is: {}", y);
+    println!("The modified value of y is: {y}");
 
 
     // Shadowing
+    // shadowing allows you to declare a new variable with the same name as a previous variable
+    // the new variable shadows the previous one
+    // this is useful for transforming data while keeping the same variable name
     let z: i32 = 5; // initial declaration
     println!("The initial value of z is: {}", z);
     let z: i32 = z + 10; // shadowing the previous z
     println!("The shadowed value of z is: {}", z);
     let z: i32 = z * 2; // shadowing again
     println!("The shadowed value of z after multiplication is: {}", z);
+
+    // constants
+    // constants are values that cannot be changed and must have a type annotation
+    const MAX_POINTS: u32 = 100_000; // constant declaration
+    println!("The maximum points are: {}", MAX_POINTS);
+    
     //primintive data types review
     let num : i32 = 5;
-    println!("Here is the number : {:?}", num);
+    println!("Here is the number : {num}");
     // string
     let fixed_str: &'static str = "String with fixed length"; // immutable, fixed size
     let mut growable_string: String = String::from("Growable String"); // mutable, dynamic size
