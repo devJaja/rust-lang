@@ -305,4 +305,11 @@ fn main() {
     } else {
         println!("You are a minor.");
     }
+
+    // common sytax for loop and ranges
+    // ranges are used to define a sequence of numbers
+    
+    for i in 0..5 { // exclusive range
+        println!("Exclusive range value: {}", i); 
+    }
 }
