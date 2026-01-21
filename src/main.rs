@@ -405,4 +405,22 @@ fn main() {
     let user_name: &str = "Alice"; // descriptive variable name
     println!("User name: {}", user_name);
 
+    // static variable example
+    static MAX_USERS: u32 = 1000; // static variable declaration
+    println!("Maximum users allowed: {}", MAX_USERS);
+
+    // compiler directives
+    // compiler directives are special instructions that affect the compilation process
+    // they are usually specified using attributes like #[attribute]
+    #[allow(unused_variables)] // this directive tells the compiler to ignore unused variable warnings
+    let unused_var: i32 = 42; // this variable is not used anywhere
+    // the unused_var will not generate a warning due to the directive above
+    // this is useful during development when you have code that is not yet used
+    // but you want to keep it for future use
+    // remember to remove such directives in production code to maintain code quality
+    // always use compiler directives judiciously to avoid hiding important warnings
+    // use them only when necessary and understand their implications
+    // improper use of compiler directives can lead to overlooked issues in the code
+    // always strive for clean and warning-free code
+
 }
