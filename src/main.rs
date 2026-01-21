@@ -193,5 +193,20 @@ fn main() {
        println!("The number is equal to 10");
    } else {
        println!("The number is greater than 10");
-   }        
+   } 
+
+   // match control flow
+   let day: u32 = 3;
+   let day_name: &str = match day {
+       1 => "Monday",
+       2 => "Tuesday",
+       3 => "Wednesday",
+       4 => "Thursday",
+       5 => "Friday",
+       6 => "Saturday",
+       7 => "Sunday",
+       _ => "Invalid day", // wildcard pattern
+   };
+   println!("The day is: {}", day_name);
+   
 } 
