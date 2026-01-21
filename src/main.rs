@@ -296,4 +296,13 @@ fn main() {
     let original: i32 = 10;
     let incremented: i32 = increment(original);
     println!("Original value: {}, Incremented value: {}", original, incremented);
+
+    //conditionals
+    // conditionals are used to execute code based on certain conditions
+    let age: u32 = 18;
+    if age >= 18 {
+        println!("You are an adult.");
+    } else {
+        println!("You are a minor.");
+    }
 }
