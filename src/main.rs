@@ -429,4 +429,11 @@ fn main() {
     println!("Result of left associative subtraction: {}", result1); // (10 - 5) - 2 = 3    
     let result2: i32 = 2 + 3 + 4; // left associative
     println!("Result of left associative addition: {}", result2); // (2 + 3) + 4 = 9
+
+    // Operator precedence
+    let result3: i32 = 10 + 5 * 2; // multiplication has higher precedence than addition
+    println!("Result of operator precedence: {}", result3); // 10 + (5 * 2) = 20    
+    // operator overloading
+    // operator overloading allows you to define custom behavior for operators based on the types of operands
+    use std::ops::Add;
 }
