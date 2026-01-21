@@ -233,11 +233,18 @@ fn main() {
         countdown -= 1; // decrement the countdown
     }
     println!("Liftoff!");
-    
+
     let mut num: i32 = 0;
     while num < 5 {
         println!("Number in while loop: {}", num);
         num += 1;
     }
-    
+
+    // for loop
+    // the for loop is used to iterate over a range or collection
+    // here we use a for loop to iterate over a range of numbers from 0 to 4
+    // the for loop is useful when the number of iterations is known beforehand
+    for i in 0..5 {
+        println!("Number in for loop: {}", i);
+    }
 }
