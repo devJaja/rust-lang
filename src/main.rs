@@ -247,4 +247,31 @@ fn main() {
     for i in 0..5 {
         println!("Number in for loop: {}", i);
     }
-}
+
+    // iterating over an array using for loop
+    let arr: [i32; 3] = [10, 20, 30];
+    for element in arr.iter() {
+        println!("Array element: {}", element);
+    }
+
+    // iterating over a vector using for loop
+    let vec: Vec<i32> = vec![100, 200, 300];
+    for value in vec.iter() {
+        println!("Vector value: {}", value);
+    }
+
+    // using enumerate to get index and value
+    let fruits: Vec<&str> = vec!["Apple", "Banana", "Cherry"];
+    for (index, fruit) in fruits.iter().enumerate() {
+        println!("Fruit {}: {}", index, fruit); 
+    }
+
+    // using loop labels to break from nested loops
+    'outer: for i in 1..4 {
+        for j in 1..4 {
+            if i * j == 4 {
+                break 'outer; // break from the outer loop
+                break; // break from the inner loop
+            }
+        }
+    }
