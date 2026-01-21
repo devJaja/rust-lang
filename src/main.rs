@@ -330,5 +330,17 @@ fn main() {
     // use them only when necessary and understand their implications
     // improper use of compiler directives can lead to overlooked issues in the code
     // always strive for clean and warning-free code
+
+
+    // variable conventions and statis
+    // variable names should be descriptive and use snake_case
+    // static variables have a fixed memory location and live for the entire duration of the program
+    // static variables are useful for constants that are shared across multiple functions or modules
+    // static variables are declared with the 'static' keyword
+    
+    static GLOBAL_COUNT: i32 = 100; // static variable declaration
+    println!("Global count from static variable: {}", GLOBAL_COUNT);
+    
+
     
 }
