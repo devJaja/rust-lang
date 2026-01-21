@@ -162,7 +162,23 @@ fn main() {
     // difference between expression and statement
     // statement is an instruction that performs an action but does not return a value
     // expression is a piece of code that evaluates to a value
-    
+
+    fn add(num1:i32, num2:i32) -> i32 {
+        num1 + num2 // expression that returns the sum
+    }
 
     fn main() {
+        add(num1=5, num2=10); // calling the add function
     }
+
+    // code blocks
+    // code blocks are used to group multiple statements and expressions together
+    // they are enclosed in curly braces {}
+    // code blocks can be used to create scopes for variables
+    // the last expression in a code block is the return value of the block
+    let result: i32 = {
+        let a: i32 = 10;
+        let b: i32 = 20;
+        a + b // last expression, the result of the block
+    };
+    println!("Result from code block: {}", result);
