@@ -340,7 +340,19 @@ fn main() {
     
     static GLOBAL_COUNT: i32 = 100; // static variable declaration
     println!("Global count from static variable: {}", GLOBAL_COUNT);
-    
 
+    // operators
+    // operators are symbols that perform operations on variables and values
+    // common operators include arithmetic, comparison, and logical operators
+    // -arithmetic operators
+    // - comparison operators
+    // - logical operators  
+    let sum: i32 = 5 + 10; // addition
+    let difference: i32 = 10 - 5; // subtraction
+    let product: i32 = 5 * 10; // multiplication
+    let quotient: i32 = 10 / 5; // division
+    let remainder: i32 = 10 % 3; // modulus
+    println!("Sum: {}, Difference: {}, Product: {}, Quotient: {}, Remainder: {}", sum, difference, product, quotient, remainder);
+    
     
 }
