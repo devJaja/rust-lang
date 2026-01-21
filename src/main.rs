@@ -275,3 +275,25 @@ fn main() {
             }
         }
     }
+    println!("Exited nested loops using loop label");
+
+    // using continue to skip an iteration
+    for num in 1..6 {
+        if num % 2 == 0 {
+            continue; // skip even numbers
+            println!("Number in continue loop: {}", num);
+        }
+    }
+    println!("Finished continue loop");
+
+    // mutation in function parameters
+    // by default, function parameters are immutable
+    // to modify a parameter, you need to use the 'mut' keyword
+    fn increment(mut value: i32) -> i32 {
+        value += 1; // modify the parameter
+        value // return the modified value
+    }
+    let original: i32 = 10;
+    let incremented: i32 = increment(original);
+    println!("Original value: {}, Incremented value: {}", original, incremented);
+}
