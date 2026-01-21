@@ -312,4 +312,23 @@ fn main() {
     for i in 0..5 { // exclusive range
         println!("Exclusive range value: {}", i); 
     }
+
+    // compiler directives
+    // compiler directives are special instructions that affect the compilation process
+    // they are usually specified using attributes like #[attribute]
+    
+    // here is an example of a compiler directive to allow dead code
+    #[allow(dead_code)] // this directive tells the compiler to ignore dead code warnings
+    fn unused_function() {
+        // this function is not used anywhere
+    }
+    // the unused_function will not generate a warning due to the directive above
+    // this is useful during development when you have code that is not yet used
+    // but you want to keep it for future use
+    // remember to remove such directives in production code to maintain code quality
+    // always use compiler directives judiciously to avoid hiding important warnings
+    // use them only when necessary and understand their implications
+    // improper use of compiler directives can lead to overlooked issues in the code
+    // always strive for clean and warning-free code
+    
 }
