@@ -365,4 +365,44 @@ fn main() {
     let is_less_equal: bool = 5 <= 10; // less than or equal to
     println!("Is Equal: {}, Is Not Equal: {}, Is Greater: {}, Is Less: {}, Is Greater Equal: {}, Is Less Equal: {}", is_equal, is_not_equal, is_greater, is_less, is_greater_equal, is_less_equal);
 
+    // loogical operators
+    // logical operators are used to combine boolean values
+    let and_result: bool = true && false; // logical AND
+    let or_result: bool = true || false; // logical OR
+    let not_result: bool = !true; // logical NOT
+    println!("AND Result: {}, OR Result: {}, NOT Result: {}", and_result, or_result, not_result);
+
+    // loop and ranges
+    // loops are used to repeat a block of code multiple times
+    // ranges are used to define a sequence of numbers
+    for i in 1..=5 { // inclusive range
+        println!("Inclusive range value: {}", i);   
+    }
+    // the loop will print numbers from 1 to 5 inclusive
+    // the '..=' syntax creates an inclusive range that includes the end value
+    // this is useful when you want to include the last number in the sequence
+    // remember to choose the appropriate range syntax based on your requirements
+    // using ranges effectively can simplify your code and improve readability
+    // always consider edge cases when working with ranges and loops
+    // test your loops to ensure they behave as expected
+    // avoid infinite loops by ensuring the loop condition will eventually be false
+    // use loops and ranges judiciously to enhance code clarity and maintainability
+    // practice writing loops and ranges to become proficient in their usage
+
+    // reverse ranges
+    for i in (1..=5).rev() { // reverse inclusive range
+        println!("Reverse range value: {}", i);
+    }
+
+    // iterating with a step size
+    // here we use the step_by method to iterate over a range with a step size of 2
+    for i in (0..10).step_by(2) {
+        println!("Step by 2 value: {}", i);
+    }
+
+    // varaible conventions and statics
+    // variable names should be descriptive and use snake_case
+    let user_name: &str = "Alice"; // descriptive variable name
+    println!("User name: {}", user_name);
+
 }
