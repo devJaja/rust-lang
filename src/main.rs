@@ -208,5 +208,17 @@ fn main() {
        _ => "Invalid day", // wildcard pattern
    };
    println!("The day is: {}", day_name);
-   
-} 
+
+    // loops
+    // loops are used to repeat a block of code multiple times
+    // common loop types include loop, while, and for
+    // infinite loop using loop keyword
+    let mut count: i32 = 0;
+    loop {
+        count += 1;
+        if count == 5 {
+            break; // exit the loop when count reaches 5
+        }
+    }
+    println!("Count after loop: {}", count);
+}
