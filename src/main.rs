@@ -182,3 +182,16 @@ fn main() {
         a + b // last expression, the result of the block
     };
     println!("Result from code block: {}", result);
+
+   // control flow
+   // control flow statements are used to control the execution of code based on conditions
+   // common control flow statements include if, else if, else, and match
+   let number: i32 = 15;
+   if number < 10 {
+       println!("The number is less than 10");
+   } else if number == 10 {
+       println!("The number is equal to 10");
+   } else {
+       println!("The number is greater than 10");
+   }        
+} 
