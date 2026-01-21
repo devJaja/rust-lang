@@ -423,4 +423,10 @@ fn main() {
     // improper use of compiler directives can lead to overlooked issues in the code
     // always strive for clean and warning-free code
 
+    // Associativity and operator overloading
+    // associativity determines the order in which operators of the same precedence are evaluated
+    let result1: i32 = 10 - 5 - 2; // left associative
+    println!("Result of left associative subtraction: {}", result1); // (10 - 5) - 2 = 3    
+    let result2: i32 = 2 + 3 + 4; // left associative
+    println!("Result of left associative addition: {}", result2); // (2 + 3) + 4 = 9
 }
