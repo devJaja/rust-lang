@@ -354,5 +354,15 @@ fn main() {
     let remainder: i32 = 10 % 3; // modulus
     println!("Sum: {}, Difference: {}, Product: {}, Quotient: {}, Remainder: {}", sum, difference, product, quotient, remainder);
     
-    
+    // comparison operators
+    // comparison operators are used to compare two values
+    // they return a boolean value (true or false)
+    let is_equal: bool = 5 == 5; // equality
+    let is_not_equal: bool = 5 != 10; // inequality
+    let is_greater: bool = 10 > 5; // greater than
+    let is_less: bool = 5 < 10; // less than
+    let is_greater_equal: bool = 10 >= 10; // greater than or equal to
+    let is_less_equal: bool = 5 <= 10; // less than or equal to
+    println!("Is Equal: {}, Is Not Equal: {}, Is Greater: {}, Is Less: {}, Is Greater Equal: {}, Is Less Equal: {}", is_equal, is_not_equal, is_greater, is_less, is_greater_equal, is_less_equal);
+
 }
