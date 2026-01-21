@@ -221,4 +221,23 @@ fn main() {
         }
     }
     println!("Count after loop: {}", count);
+
+    // while loop
+    // the while loop continues as long as the condition is true
+    // here we use while loop to count down from 5 to 1
+    // when the count reaches 0, the loop stops
+    // this is useful for scenarios where the number of iterations is not known beforehand
+    let mut countdown: i32 = 5;
+    while countdown > 0 {
+        println!("Countdown: {}", countdown);
+        countdown -= 1; // decrement the countdown
+    }
+    println!("Liftoff!");
+    
+    let mut num: i32 = 0;
+    while num < 5 {
+        println!("Number in while loop: {}", num);
+        num += 1;
+    }
+    
 }
