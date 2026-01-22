@@ -167,9 +167,9 @@ fn main() {
         num1 + num2 // expression that returns the sum
     }
 
-    fn main() {
-        add(num1=5, num2=10); // calling the add function
-    }
+    // fn main() {
+    //     add(num1=5, num2=10); // calling the add function
+    // }
 
     // code blocks
     // code blocks are used to group multiple statements and expressions together
@@ -436,4 +436,27 @@ fn main() {
     // operator overloading
     // operator overloading allows you to define custom behavior for operators based on the types of operands
     use std::ops::Add;
+
+    // Ownership and Borrowing
+    // ownership is a key concept in Rust that ensures memory safety without a garbage collector
+    // every value in Rust has a single owner
+     let owner: String = String::from("Rust Ownership");
+    println!("Owner value: {}", owner);
+
+    // when the owner goes out of scope, the value is dropped and memory is freed
+    // borrowing allows you to reference a value without taking ownership
+    // there are two types of borrowing: immutable and mutable
+    // validation of ownership and borrowing rules is enforced at compile time
+    // volatile and non-volatile variables
+    // volatile variables are used in low-level programming to indicate that a variable's value may change unexpectedly
+    // eg: hardware registers, shared memory in concurrent programming
+    // non-volatile variables are the standard variables used in most programming scenarios eg: local variables, function parameters
+
+    // primitive data types ownership and borrowing
+    // immutable borrow
+    // primitive data types implement the Copy trait, allowing for implicit copying during assignment
+    
+    let a:i32 = 10;
+    let b:i32 = a; // immutable borrow
+    println!("{a}");
 }
