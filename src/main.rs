@@ -486,4 +486,39 @@ fn main() {
     let s1: String = String::from("Hello, Rust!");
     take_ownership(s1);
     // s1 is no longer valid here
+
+    // functions that give ownership
+    fn gives_ownership() -> String {
+        let s: String = String::from("Owned String");
+        s // ownership is transferred to the caller
+    }
+    let s2: String = gives_ownership();
+    println!("Received ownership of: {}", s2);
+
+    // functions that take and give back ownership
+    fn take_and_give_back(s: String) -> String {
+        s // ownership is transferred back to the caller
+    }
+    let s3: String = String::from("Temporary Ownership");
+    let s4: String = take_and_give_back(s3);
+    println!("Ownership after function call: {}", s4);
+
+    // functions and ownership with primitive data types
+    fn add_one(num: i32) -> i32 {
+        num + 1 // primitive types implement the Copy trait, so ownership is not transferred
+    }
+
+    let number: i32 = 5;
+    let new_number: i32 = add_one(number);
+    println!("Original number: {}, New number: {}", number, new_number);
+
+    // borrowing in functions
+    // functions can borrow values using references
+    // rules of borrowing are enforced at compile time
+    // - immutable references allow multiple borrows
+    // - mutable references allow only one borrow at a time
+    
+    fn calculate_length(s: &String) -> usize {
+        s.len() // borrow the string and return its length
+    }
 }
