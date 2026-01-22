@@ -459,4 +459,31 @@ fn main() {
     let a:i32 = 10;
     let b:i32 = a; // immutable borrow
     println!("{a}");
+
+    // mutable borrow
+    let mut c:i32 = 20;
+    {
+        let d: &mut i32 = &mut c; // mutable borrow
+        *d += 10; // modify the borrowed value
+        println!("Modified value: {}", *d);
+    }
+
+    println!("Original value after mutable borrow: {}", c);
+
+    // ownership in functions
+    // function takes ownership of the parameter
+    // functions that give ownership
+    // functions that take and give back ownership
+    // here is an example of a function that takes ownership of a vector parameter
+    fn takes_vector_ownership(v: Vec<i32>) {
+        println!("Vector inside function: {:?}", v);
+    }   
+    // the ownership is transferred to the function
+    fn take_ownership(s: String) {
+        println!("Taking ownership of: {}", s);
+    }
+
+    let s1: String = String::from("Hello, Rust!");
+    take_ownership(s1);
+    // s1 is no longer valid here
 }
