@@ -542,4 +542,23 @@ fn main() {
     // owned and borrowed types
     // owned types have a single owner and are responsible for managing their own memory
     // borrowed types are references to owned types and do not own the data they point to
+    // owned types include String, Vec, and custom structs
+    // borrowed types include &str, &String, and &Vec
+    // owned type have a drop function that is called when they go out of scope
+    // owned types can be moved, while borrowed types cannot be moved
+    // owned types can be mutated if they are mutable, while borrowed types can only be mutated if they are mutable references
+    // owned types can be cloned to create a new owned instance, while borrowed types cannot be cloned
+    // owned types have no & sign, while borrowed types have & sign
+    // owned types can be passed to functions by value, while borrowed types are passed by reference
+    // owned types can be returned from functions, while borrowed types cannot be returned unless they have a longer lifetime than the function
+    // owned types can implement traits, while borrowed types cannot implement traits directly
+    // owned types can be used in data structures, while borrowed types cannot be used directly in data structures
+    // owned types can be serialized and deserialized, while borrowed types cannot be serialized directly
+    // owned types can be used in multithreaded contexts, while borrowed types cannot be shared across threads without synchronization
+    // owned types can be used in async contexts, while borrowed types cannot be awaited directly
+    // owned types can be used in closures, while borrowed types cannot be captured by closures directly
+    // owned types can be used in macros, while borrowed types cannot be used directly in macros
+    // owned types can be used in FFI, while borrowed types cannot be passed directly to foreign functions
+    // owned types can be used in generics, while borrowed types cannot be used directly in generic type parameters
+    
 }
