@@ -538,4 +538,8 @@ fn main() {
     let value_ref: &mut i32 = &mut value; // mutable reference
     *value_ref += 5; // dereference and modify the value
     println!("Value after dereferencing: {}", value);
+
+    // owned and borrowed types
+    // owned types have a single owner and are responsible for managing their own memory
+    // borrowed types are references to owned types and do not own the data they point to
 }
