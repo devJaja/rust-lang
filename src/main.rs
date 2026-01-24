@@ -441,7 +441,7 @@ fn main() {
     // ownership is a key concept in Rust that ensures memory safety without a garbage collector
     // every value in Rust has a single owner
      let owner: String = String::from("Rust Ownership");
-    println!("Owner value: {}", owner);
+    println!("Owner value: {}", owner);\
 
     // when the owner goes out of scope, the value is dropped and memory is freed
     // borrowing allows you to reference a value without taking ownership
@@ -517,8 +517,25 @@ fn main() {
     // rules of borrowing are enforced at compile time
     // - immutable references allow multiple borrows
     // - mutable references allow only one borrow at a time
-    
+    // rules of borrowing
+    // 1. At any given time, you can have either one mutable reference or any number of immutable references.
+    // 2. References must always be valid.
+
     fn calculate_length(s: &String) -> usize {
         s.len() // borrow the string and return its length
     }
+
+    // borrowing in functions
+    // functions that immutably borrow a value
+    // functions that mutably borrow a value
+    // functions that borrow and return values
+
+    // dereferencing
+    // dereferencing is the process of accessing the value that a reference points to
+    // dereferencing is done using the '*' operator
+    // here is an example of dereferencing a mutable reference
+    let mut value: i32 = 10;
+    let value_ref: &mut i32 = &mut value; // mutable reference
+    *value_ref += 5; // dereference and modify the value
+    println!("Value after dereferencing: {}", value);
 }
