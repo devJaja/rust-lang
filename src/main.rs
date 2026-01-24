@@ -576,5 +576,10 @@ fn main() {
     // stack allocated types cannot grow or shrink in size
     // stack allocated types are stored in contiguous memory locations
     // stack allocated types have a lower overhead compared to heap allocated types
+    // e.g:
+    let stack_integer: i32 = 42; // stack allocated integer
+    let stack_array: [i32; 3] = [1, 2, 3]; // stack allocated array
+    println!("Stack Integer: {}", stack_integer);
+    println!("Stack Array: {:?}", stack_array);
 
 }
