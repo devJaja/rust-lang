@@ -560,5 +560,10 @@ fn main() {
     // owned types can be used in macros, while borrowed types cannot be used directly in macros
     // owned types can be used in FFI, while borrowed types cannot be passed directly to foreign functions
     // owned types can be used in generics, while borrowed types cannot be used directly in generic type parameters
+    // e.g:
+    let owned_string: String = String::from("Owned String");
+    let borrowed_string: &String = &owned_string; // borrowed type
+    println!("Owned String: {}", owned_string);
+    println!("Borrowed String: {}", borrowed_string);
     
 }
