@@ -600,5 +600,14 @@ fn main() {
     println!("Heap String: {}", heap_string);
     println!("Heap Vector: {:?}", heap_vector); 
 
+    // parentheses in deref calls
+    // parentheses are used to group expressions and clarify the order of operations
+    // ensure dereferencing happens before method calls
+    // without parentheses, method calls may be interpreted incorrectly
+    let mut num: i32 = 10;
+    let num_ref: &mut i32 = &mut num; // mutable reference
+    (*num_ref).checked_add(5); // dereference before method call
+    println!("Number after deref and method call: {}", num);    
+
 
 }
