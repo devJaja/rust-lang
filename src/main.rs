@@ -576,6 +576,8 @@ fn main() {
     // stack allocated types cannot grow or shrink in size
     // stack allocated types are stored in contiguous memory locations
     // stack allocated types have a lower overhead compared to heap allocated types
+    // applying deref and assignment results in copying the value
+    // with deref of a mutable reference, you can update the original variable
     // e.g:
     let stack_integer: i32 = 42; // stack allocated integer
     let stack_array: [i32; 3] = [1, 2, 3]; // stack allocated array
@@ -590,10 +592,13 @@ fn main() {
     // heap allocated types can grow or shrink in size
     // heap allocated types require manual memory management through ownership and borrowing
     // heap allocated types have a higher overhead compared to stack allocated types
+    // applying Deref and assignment is not allowed directly, you need to use methods to manipulate the data
+    // because ownership moves and dangling references update can be done through (*ref).method() syntax
     // e.g:
     let heap_string: String = String::from("Heap Allocated String"); // heap allocated string
     let heap_vector: Vec<i32> = vec![1, 2, 3]; // heap allocated vector
     println!("Heap String: {}", heap_string);
     println!("Heap Vector: {:?}", heap_vector); 
+
 
 }
