@@ -590,5 +590,10 @@ fn main() {
     // heap allocated types can grow or shrink in size
     // heap allocated types require manual memory management through ownership and borrowing
     // heap allocated types have a higher overhead compared to stack allocated types
+    // e.g:
+    let heap_string: String = String::from("Heap Allocated String"); // heap allocated string
+    let heap_vector: Vec<i32> = vec![1, 2, 3]; // heap allocated vector
+    println!("Heap String: {}", heap_string);
+    println!("Heap Vector: {:?}", heap_vector); 
 
 }
