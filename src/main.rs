@@ -582,4 +582,13 @@ fn main() {
     println!("Stack Integer: {}", stack_integer);
     println!("Stack Array: {:?}", stack_array);
 
+    // heap allocated types
+    // heap allocated types are stored on the heap memory
+    // heap allocated types can have a dynamic size known at runtime
+    // heap allocated types include String, Vec, and Box
+    // heap allocated types are slower to allocate and deallocate compared to stack allocated types
+    // heap allocated types can grow or shrink in size
+    // heap allocated types require manual memory management through ownership and borrowing
+    // heap allocated types have a higher overhead compared to stack allocated types
+
 }
