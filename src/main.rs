@@ -565,5 +565,16 @@ fn main() {
     let borrowed_string: &String = &owned_string; // borrowed type
     println!("Owned String: {}", owned_string);
     println!("Borrowed String: {}", borrowed_string);
-    
+
+    // stack allocated types
+    // stack allocated types are stored on the stack memory
+    // stack allocated types have a fixed size known at compile time
+    // stack allocated types include primitive data types and arrays
+    // stack allocated types are faster to allocate and deallocate compared to heap allocated types
+    // stack allocated types have a limited size due to stack memory constraints
+    // stack allocated types are automatically deallocated when they go out of scope
+    // stack allocated types cannot grow or shrink in size
+    // stack allocated types are stored in contiguous memory locations
+    // stack allocated types have a lower overhead compared to heap allocated types
+
 }
