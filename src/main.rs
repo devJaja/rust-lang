@@ -607,7 +607,13 @@ fn main() {
     let mut num: i32 = 10;
     let num_ref: &mut i32 = &mut num; // mutable reference
     (*num_ref).checked_add(5); // dereference before method call
-    println!("Number after deref and method call: {}", num);    
+    println!("Number after deref and method call: {}", num); 
+    
+    
+    // Custom and Library Provided useful types
+    // custom types are user-defined types created using structs and enums
+    // library provided types are types provided by the Rust standard library and external crates   
+    // custom types
 
 
 }
