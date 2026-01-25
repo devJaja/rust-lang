@@ -629,4 +629,13 @@ fn main() {
             (self.x.powi(2) + self.y.powi(2) + self.z.powi(2)).sqrt()
         }
         // additional methods can be added here
-}
+        // Enums
+        // enums are used to define a type that can be one of several variants
+        // enums are useful for representing data that can take on different forms
+        // here is an example of an enum representing different shapes
+        enum Shape {
+            Circle(f64),
+            Rectangle(f64, f64),
+            Triangle(f64, f64),
+        }
+        let my_shape: Shape = Shape::Circle(5.0); // creating an instance of Shape}
