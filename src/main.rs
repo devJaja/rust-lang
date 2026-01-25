@@ -614,6 +614,12 @@ fn main() {
     // custom types are user-defined types created using structs and enums
     // library provided types are types provided by the Rust standard library and external crates   
     // custom types
-
-
+    struct Point {
+        x: f64,
+        y: f64,     
+        z: f64,
+    }
+    let p1: Point = Point { x: 1.0, y: 2.0, z: 3.0 }; // creating an instance of Point
+    println!("Point coordinates: ({}, {}, {})", p1.x, p1.y, p1.z);  
+    
 }
