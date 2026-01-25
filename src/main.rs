@@ -621,5 +621,12 @@ fn main() {
     }
     let p1: Point = Point { x: 1.0, y: 2.0, z: 3.0 }; // creating an instance of Point
     println!("Point coordinates: ({}, {}, {})", p1.x, p1.y, p1.z);  
-    
+
+    // adding functionality to structs
+    // you can add methods to structs using impl blocks
+    impl Point {
+        fn distance_from_origin(&self) -> f64 {
+            (self.x.powi(2) + self.y.powi(2) + self.z.powi(2)).sqrt()
+        }
+        // additional methods can be added here
 }
