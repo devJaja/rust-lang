@@ -639,3 +639,19 @@ fn main() {
             Triangle(f64, f64),
         }
         let my_shape: Shape = Shape::Circle(5.0); // creating an instance of Shape}
+
+        match my_shape {
+            Shape::Circle(radius) => {
+                let area: f64 = std::f64::consts::PI * radius * radius;
+                println!("Circle area: {}", area);
+            },
+            Shape::Rectangle(width, height) => {
+                let area: f64 = width * height;
+                println!("Rectangle area: {}", area);
+            },
+            Shape::Triangle(base, height) => {
+                let area: f64 = 0.5 * base * height;
+                println!("Triangle area: {}", area);
+            },
+        }
+    }   
