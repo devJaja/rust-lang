@@ -771,3 +771,7 @@ fn main() {
     let value_ref: &mut i32 = &mut value; // mutable reference
     *value_ref += 5; // dereference and modify the value
     println!("Value after dereferencing: {}", value);
+    // Dereferencing is essential when working with references to access or modify the underlying data
+    // always ensure that references are valid before dereferencing to avoid runtime errors
+    // practice dereferencing to become comfortable with its usage in Rust programming
+}
