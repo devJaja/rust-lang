@@ -661,3 +661,9 @@ fn main() {
     // Every value in Rust has a single owner, which is responsible for managing the memory of that value
     // When the owner goes out of scope, the value is dropped and memory is freed
     // This ownership model prevents common memory errors such as double frees and dangling pointers
+    // Ownership can be transferred between variables through moves
+    // When a value is moved, the original owner can no longer access the value
+    // to move a value, you simply assign it to a new variable
+    let s1: String = String::from("Hello, Rust!");
+    let s2: String = s1; // ownership of the string is moved to s2
+    // println!("{}", s1); // this line would cause a compile-time error because s1 is no longer valid
