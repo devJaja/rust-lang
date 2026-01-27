@@ -763,3 +763,11 @@ fn main() {
     println!("Dangling reference: {}", s13);
     */
     // The above code is commented out because it would cause a compile-time error
+
+    // Dereferencing References
+    // Dereferencing is the process of accessing the value that a reference points to
+    // Dereferencing is done using the '*' operator
+    let mut value: i32 = 10;
+    let value_ref: &mut i32 = &mut value; // mutable reference
+    *value_ref += 5; // dereference and modify the value
+    println!("Value after dereferencing: {}", value);
