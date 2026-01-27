@@ -754,3 +754,12 @@ fn main() {
     // Dangling references occur when a reference points to a value that has been dropped
     // Rust prevents dangling references at compile time through its ownership and borrowing rules
     // Here is an example of a dangling reference that Rust will not allow
+    /*
+    fn dangling_reference() -> &String {
+        let s: String = String::from("This will cause a dangling reference");
+        &s // returning a reference to a local variable
+    }
+    let s13: &String = dangling_reference(); // this line would cause a compile-time error
+    println!("Dangling reference: {}", s13);
+    */
+    // The above code is commented out because it would cause a compile-time error
