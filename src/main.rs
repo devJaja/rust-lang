@@ -683,4 +683,12 @@ fn main() {
     }
     let s4: String = gives_ownership();
     println!("Received ownership of: {}", s4);
+    // Ownership can also be transferred back to the caller
+    fn take_and_give_back(s: String) -> String {
+        s // ownership is transferred back to the caller
+    }
+    let s5: String = String::from("Temporary Ownership");
+    let s6: String = take_and_give_back(s5);
+    println!("Ownership after function call: {}", s6);
+    
     
