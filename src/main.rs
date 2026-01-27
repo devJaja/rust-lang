@@ -720,3 +720,11 @@ fn main() {
     let s10: String = take_and_return_string(s9);
     println!("Ownership after function call: {}", s10); 
     
+
+    // Borrowing in detail
+    // Borrowing allows you to reference a value without taking ownership
+    // There are two types of borrowing: immutable and mutable
+    // Immutable references allow multiple borrows of a value
+    // Mutable references allow only one borrow at a time
+    // Rules of borrowing are enforced at compile time to ensure memory safety
+    // Rules of Borrowing
