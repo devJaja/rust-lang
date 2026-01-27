@@ -676,4 +676,11 @@ fn main() {
     let s3: String = String::from("Ownership in functions");
     take_ownership(s3); // ownership of s3 is moved to the function
     // println!("{}", s3); // this line would cause a compile-time error because s3 is no longer valid
+    // Ownership can be returned from functions
+    fn gives_ownership() -> String {
+        let s: String = String::from("Owned String");
+        s // ownership is transferred to the caller
+    }
+    let s4: String = gives_ownership();
+    println!("Received ownership of: {}", s4);
     
