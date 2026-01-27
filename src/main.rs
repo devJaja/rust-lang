@@ -709,4 +709,14 @@ fn main() {
         let s: String = String::from("Owned String from function");
         s // ownership is transferred to the caller
     }
+    let s8: String = gives_string_ownership();
+    println!("Received ownership of: {}", s8);
+
+    // functions that take and give back ownership
+    fn take_and_return_string(s: String) -> String {
+        s // ownership is transferred back to the caller
+    }
+    let s9: String = String::from("Temporary Ownership in function");
+    let s10: String = take_and_return_string(s9);
+    println!("Ownership after function call: {}", s10); 
     
