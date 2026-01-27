@@ -728,10 +728,13 @@ fn main() {
     // Mutable references allow only one borrow at a time
     // Rules of borrowing are enforced at compile time to ensure memory safety
 
-    
+
     // Rules of Borrowing
     // 1. At any given time, you can have either one mutable reference or any number of immutable references.
     // 2. References must always be valid.  
     fn calculate_string_length(s: &String) -> usize {
         s.len() // borrow the string and return its length
     }
+    let s11: String = String::from("Hello, Borrowing!");
+    let length: usize = calculate_string_length(&s11); // pass a reference to the string
+    println!("Length of the string: {}", length);
