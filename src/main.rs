@@ -690,5 +690,12 @@ fn main() {
     let s5: String = String::from("Temporary Ownership");
     let s6: String = take_and_give_back(s5);
     println!("Ownership after function call: {}", s6);
+
+    // Basic Ownership Rules
+    // 1. Each value in Rust has a variable that’s called its owner.
+    // 2. There can only be one owner at a time.
+    // 3. When the owner goes out of scope, the value will be dropped.
+
+    
     
     
