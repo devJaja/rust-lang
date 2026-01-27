@@ -738,3 +738,19 @@ fn main() {
     let s11: String = String::from("Hello, Borrowing!");
     let length: usize = calculate_string_length(&s11); // pass a reference to the string
     println!("Length of the string: {}", length);
+
+    // Mutable Borrowing in Detail
+    // Mutable borrowing allows you to modify a value through a reference
+    // Only one mutable reference is allowed at a time to prevent data races
+    // Here is an example of mutable borrowing
+    fn modify_string(s: &mut String) {
+        s.push_str(" - Modified"); // modify the borrowed string
+    }
+    let mut s12: String = String::from("Hello, Mutable Borrowing!");
+    modify_string(&mut s12); // pass a mutable reference to the string
+    println!("Modified string: {}", s12);
+
+    // Dangling References
+    // Dangling references occur when a reference points to a value that has been dropped
+    // Rust prevents dangling references at compile time through its ownership and borrowing rules
+    // Here is an example of a dangling reference that Rust will not allow
