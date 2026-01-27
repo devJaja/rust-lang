@@ -696,6 +696,10 @@ fn main() {
     // 2. There can only be one owner at a time.
     // 3. When the owner goes out of scope, the value will be dropped.
 
-    
+    // Ownership in functions
+    // function takes ownership of the parameter
+    fn takes_string_ownership(s: String) {
+        println!("String inside function: {}", s);
+    }
     
     
