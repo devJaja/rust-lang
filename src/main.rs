@@ -667,3 +667,13 @@ fn main() {
     let s1: String = String::from("Hello, Rust!");
     let s2: String = s1; // ownership of the string is moved to s2
     // println!("{}", s1); // this line would cause a compile-time error because s1 is no longer valid
+    println!("s2: {}", s2); // s2 is the new owner of the string
+    // Ownership can also be transferred through function calls
+    // When a value is passed to a function, the function takes ownership of that value
+    fn take_ownership(s: String) {
+        println!("Taking ownership of: {}", s);
+    }
+    let s3: String = String::from("Ownership in functions");
+    take_ownership(s3); // ownership of s3 is moved to the function
+    // println!("{}", s3); // this line would cause a compile-time error because s3 is no longer valid
+    
