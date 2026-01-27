@@ -701,5 +701,12 @@ fn main() {
     fn takes_string_ownership(s: String) {
         println!("String inside function: {}", s);
     }
-    
+    let s7: String = String::from("Hello, Ownership!");
+    takes_string_ownership(s7);
+    // s7 is no longer valid here
+    // functions that give ownership
+    fn gives_string_ownership() -> String {
+        let s: String = String::from("Owned String from function");
+        s // ownership is transferred to the caller
+    }
     
