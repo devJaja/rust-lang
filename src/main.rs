@@ -658,4 +658,6 @@ fn main() {
     
     // DETAILESD EXPLANATION OF OWNERSHIP AND BORROWING CONCEPTS
     // Ownership is a fundamental concept in Rust that ensures memory safety without a garbage collector
-    // Every value in Rust has a single owner, which is responsible for managing the memory of
+    // Every value in Rust has a single owner, which is responsible for managing the memory of that value
+    // When the owner goes out of scope, the value is dropped and memory is freed
+    // This ownership model prevents common memory errors such as double frees and dangling pointers
