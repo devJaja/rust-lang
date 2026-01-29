@@ -950,6 +950,11 @@ fn main() {
     }
     // example function that returns a Result
     fn parse_number(s: &str) -> Result<i32, String> {
+        match s.parse::<i32>() {
+            Ok(num) => Result::Ok(num), // return Ok with the parsed number
+            Err(_) => Result::Err(String::from("Failed to parse number")), // return Err with an error message
+        }
+    }
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
