@@ -911,7 +911,28 @@ fn main() {
         }
     }
 
-    
+    // options
+    // options are used to represent a value that may or may not be present
+    // the Option enum has two variants: Some(T) and None
+    // Some(T) represents a value of type T
+    // None represents the absence of a value
+    // options are useful for handling cases where a value may be missing or undefined
+    // some(T) is used to wrap a value of type T
+    // generic types allow options to work with any data type
+    fn divide(numerator: f64, denominator: f64) -> Option<f64>
+    {
+        if denominator == 0.0 {
+            None // return None if denominator is zero
+        } else {
+            Some(numerator / denominator) // return Some with the result
+        }
+    }
+    let result1: Option<f64> = divide(10.0, 2.0);
+    match result1 {
+        Some(value) => println!("Result: {}", value),
+        None => println!("Error: Division by zero"),
+    }
+
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
