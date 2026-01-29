@@ -964,6 +964,14 @@ fn main() {
     scores.insert("Alice", 50); // insert key-value pairs
     scores.insert("Bob", 75);
     scores.insert("Jaja", 99);
+    // basic operations on HashMaps
+    if let Some(score) = scores.get("Alice") {
+        println!("Alice's score: {}", score); // retrieve value by key
+    }
+    scores.remove("Bob"); // remove key-value pair by key
+    for (name, score) in &scores {
+        println!("{}: {}", name, score); // iterate over key-value pairs
+    }
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
