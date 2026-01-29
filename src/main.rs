@@ -862,3 +862,13 @@ fn main() {
     // if a function does not return a value, it implicitly returns the unit type '()'
     // parameters are defined within the parentheses and can have types specified
     // statements are pieces of code that perform actions but do     
+    // not return values
+    // expressions are pieces of code that evaluate to a value
+    fn add(num1: i32, num2: i32) -> i32 {
+        num1 + num2 // expression that returns the sum of num1 and num2
+    }
+    let sum: i32 = add(5, 10); // calling the function and storing the result
+    println!("Sum: {}", sum);       
+    // code blocks
+    // code blocks are enclosed in curly braces '{}'
+    // they are used to group multiple statements and expressions together  
