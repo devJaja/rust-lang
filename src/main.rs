@@ -808,5 +808,18 @@ fn main() {
     let mut rect2: Rectangle = Rectangle { width: 4.0, height: 3.0 };
     rect2.scale(2.0); // scaling the rectangle
     println!("Scaled Rectangle dimensions: {} x {}", rect2.width, rect2.height);    
-    // Enums with Ownership and Borrowinggit 
+    // Enums with Ownership and Borrowingg
+    enum Color {
+        Red,
+        Green,
+        Blue,
+        Rgb(u8, u8, u8),
+    }
+    let my_color: Color = Color::Rgb(255, 0, 0);
+    match my_color {
+        Color::Red => println!("Color is Red"),
+        Color::Green => println!("Color is Green"),
+        Color::Blue => println!("Color is Blue"),
+        Color::Rgb(r, g, b) => println!("Color is RGB({}, {}, {})", r, g, b),
+    }
 }
