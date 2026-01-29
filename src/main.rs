@@ -959,6 +959,11 @@ fn main() {
     // HashMaps
     // HashMaps are used to store key-value pairs
     // they provide efficient lookup, insertion, and deletion of values based on their keys
+    use std::collections::HashMap;
+    let mut scores: HashMap<&str, 132> = HashMap::new(); // create a new HashMap
+    scores.insert("Alice", 50); // insert key-value pairs
+    scores.insert("Bob", 75);
+    scores.insert("Jaja", 99);
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
