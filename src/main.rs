@@ -779,4 +779,8 @@ fn main() {
     // Structs and enums can also participate in ownership and borrowing
     // Structs Basic:
     // struct rules
+    struct Rectangle {
+        width: f64,
+        height: f64,
+    }
 }
