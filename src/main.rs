@@ -829,4 +829,9 @@ fn main() {
         Write(String),
         ChangeColor(i32, i32, i32),
     }
+    // emu, basisc
+    let msg: Message = Message::Write(String::from("Hello, Enums with Ownership!"));
+    match msg {
+        Message::Quit => println!("Quit message"),
+        Message::Move { x, y } => println!("Move to ({}, {})", x
 }
