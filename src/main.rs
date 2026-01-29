@@ -774,4 +774,9 @@ fn main() {
     // Dereferencing is essential when working with references to access or modify the underlying data
     // always ensure that references are valid before dereferencing to avoid runtime errors
     // practice dereferencing to become comfortable with its usage in Rust programming
+
+    // Structs and Enums with Ownership and Borrowing
+    // Structs and enums can also participate in ownership and borrowing
+    // Structs Basic:
+    // struct rules
 }
