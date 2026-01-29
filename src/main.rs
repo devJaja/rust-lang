@@ -872,3 +872,15 @@ fn main() {
     // code blocks
     // code blocks are enclosed in curly braces '{}'
     // they are used to group multiple statements and expressions together  
+    // code blocks can be used to create scopes for variables
+    // the last expression in a code block is the return value of the block
+    // here is an example of a code block that returns a value
+    let result: i32 = {
+        let a: i32 = 10;
+        let b: i32 = 20;
+        a + b // last expression is the return value
+        // no semicolon at the end of the last expression
+    };
+    println!("Result from code block: {}", result);
+
+    Struct!("cardgo and enums")
