@@ -789,4 +789,9 @@ fn main() {
     impl Rectangle {
         fn area(&self) -> f64 {
             self.width * self.height
+        }
+    }
+    let area: f64 = rect1.area();
+    println!("Rectangle area: {}", area);
+    // Structs with Borrowing
 }
