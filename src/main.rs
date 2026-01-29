@@ -833,5 +833,32 @@ fn main() {
     let msg: Message = Message::Write(String::from("Hello, Enums with Ownership!"));
     match msg {
         Message::Quit => println!("Quit message"),
-        Message::Move { x, y } => println!("Move to ({}, {})", x
-}
+        Message::Move { x, y } => println!("Move to ({}, {})", x, y),
+        Message::Write(s) => println!("Write message: {}", s),
+        Message::ChangeColor(r, g, b) => println!("Change color to RGB({}, {}, {})", r, g, b),
+    }
+
+    // adding functionality to enums
+    impl Message {
+        fn call(&self) {
+            match self {
+                Message::Quit => println!("Quit message called"),
+                Message::Move { x, y } => println!("Move to ({}, {}) called", x, y),
+                Message::Write(s) => println!("Write message: {} called", s),
+                Message::ChangeColor(r, g, b) => println!("Change color to RGB({}, {}, {}) called", r, g, b),
+            }
+        }
+    }
+    let msg2: Message = Message::Move { x: 10, y: 20 };
+    msg2.call(); // calling the method on the enum instance
+}fn main() {
+    // functions
+    // functions are used to encapsulate reusable blocks of code
+    // they help in organizing code into smaller, manageable pieces
+    // functions are defined using the 'fn' keyword
+    // the function name is followed by parentheses '()' which may contain parameters  
+    // the function body is enclosed in curly braces '{}'
+    // functions can return values using the '->' syntax to specify the return type
+    // if a function does not return a value, it implicitly returns the unit type '()'
+    // parameters are defined within the parentheses and can have types specified
+    // statements are pieces of code that perform actions but do     
