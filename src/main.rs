@@ -822,4 +822,11 @@ fn main() {
         Color::Blue => println!("Color is Blue"),
         Color::Rgb(r, g, b) => println!("Color is RGB({}, {}, {})", r, g, b),
     }
+
+    enum Message {
+        Quit,
+        Move { x: i32, y: i32 },
+        Write(String),
+        ChangeColor(i32, i32, i32),
+    }
 }
