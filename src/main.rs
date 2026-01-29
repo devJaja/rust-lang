@@ -978,6 +978,15 @@ fn main() {
     // iterating over a HashMap using a for loop
     // .contains_key() method checks if a key exists in the HashMap
 
+    // Entry methods
+    // Entry methods provide a way to access and modify entries in a HashMap
+    // they allow you to insert, update, or retrieve values based on their keys
+    // the entry() method returns an Entry enum that represents a view into a single entry in the HashMap
+    // it returns either an OccupiedEntry or a VacantEntry
+    let mut fruit_counts: HashMap<&str, u32> = HashMap::new();
+    fruit_counts.insert("apple", 3);
+    fruit_counts.insert("banana", 5);
+
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
     // common control flow statements include if, else if, else, and match
