@@ -919,6 +919,11 @@ fn main() {
     // options are useful for handling cases where a value may be missing or undefined
     // some(T) is used to wrap a value of type T
     // generic types allow options to work with any data type
+    enum Option<T> {
+        Some(T),
+        None,
+    }
+    // example function that returns an Option
     fn divide(numerator: f64, denominator: f64) -> Option<f64>
     {
         if denominator == 0.0 {
@@ -933,6 +938,18 @@ fn main() {
         None => println!("Error: Division by zero"),
     }
 
+    // result in rust
+    // result is used to represent the outcome of an operation that can succeed or fail
+    // the Result enum has two variants: Ok(T) and Err(E)
+    // Ok(T) represents a successful outcome with a value of type T
+    // Err(E) represents a failure with an error of type E
+    // results are useful for error handling in Rust
+    enum Result<T, E> {
+        Ok(T),
+        Err(E),
+    }
+    // example function that returns a Result
+    fn parse_number(s: &str) -> Result<i32, String> {
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
