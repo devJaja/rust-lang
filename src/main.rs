@@ -884,3 +884,14 @@ fn main() {
     println!("Result from code block: {}", result);
 
     Struct!("cardgo and enums")
+
+    // control flow
+    // control flow statements are used to control the execution of code based on certain conditions
+    // common control flow statements include if, else if, else, and match
+    let number: i32 = 7;
+    if number < 5 {
+        println!("Number is less than 5");
+    } else if number == 5 {
+        println!("Number is equal to 5");
+    } else {
+        println!("Number is greater than 5");
