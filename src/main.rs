@@ -972,6 +972,11 @@ fn main() {
     for (name, score) in &scores {
         println!("{}: {}", name, score); // iterate over key-value pairs
     }
+    // .insert() method adds a key-value pair to the HashMap
+    // .get() method retrieves a value by its key, returning an Option
+    // .remove() method removes a key-value pair by its key
+    // iterating over a HashMap using a for loop
+    // .contains_key() method checks if a key exists in the HashMap
 
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
