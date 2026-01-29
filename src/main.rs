@@ -885,6 +885,13 @@ fn main() {
 
     Struct!("cardgo and enums")
 
+    // Enum an structs
+    // enums are used to define a type that can be one of several variants
+    // enums are useful for representing data that can take on different forms
+    // structs we use datatypes that group related data together
+    // enum have no data types associated with them by default
+    // structs have data types associated with their fields
+
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
     // common control flow statements include if, else if, else, and match
@@ -904,4 +911,9 @@ fn main() {
         1 => println!("Monday"),
         2 => println!("Tuesday"),
         3 => println!("Wednesday"),
-        4 => println!("Thursday"),  
+        4 => println!("Thursday"), 
+        5 => println!("Friday"),
+        6 => println!("Saturday"),
+        7 => println!("Sunday"),
+        _ => println!("Invalid day"), // wildcard pattern for unmatched cases
+    }    
