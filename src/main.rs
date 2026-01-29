@@ -796,5 +796,7 @@ fn main() {
     // Structs with Borrowing
     fn print_rectangle(rect: &Rectangle) {
         println!("Rectangle dimensions (borrowed): {} x {}", rect.width, rect.height);  
-            
+    }
+    print_rectangle(&rect1); // passing a reference to the rectangle
+    // Enums with Ownership and Borrowinggit 
 }
