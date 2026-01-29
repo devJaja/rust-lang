@@ -956,6 +956,10 @@ fn main() {
         }
     }
 
+    // HashMaps
+    // HashMaps are used to store key-value pairs
+    // they provide efficient lookup, insertion, and deletion of values based on their keys
+
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
     // common control flow statements include if, else if, else, and match
