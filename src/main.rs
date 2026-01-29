@@ -895,3 +895,13 @@ fn main() {
         println!("Number is equal to 5");
     } else {
         println!("Number is greater than 5");
+    }
+    // match statement
+    // the match statement is used for pattern matching
+    // it allows you to compare a value against multiple patterns and execute code based on the matched pattern
+    let day: u32 = 3;
+    match day {
+        1 => println!("Monday"),
+        2 => println!("Tuesday"),
+        3 => println!("Wednesday"),
+        4 => println!("Thursday"),  
