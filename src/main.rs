@@ -892,6 +892,27 @@ fn main() {
     // enum have no data types associated with them by default
     // structs have data types associated with their fields
 
+    // functions in enums
+    enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday,
+    }
+    impl Day {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Day::Saturday | Day::Sunday => true,
+                _ => false,
+            }
+        }
+    }
+
+    
+
     // control flow
     // control flow statements are used to control the execution of code based on certain conditions
     // common control flow statements include if, else if, else, and match
