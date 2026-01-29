@@ -798,5 +798,15 @@ fn main() {
         println!("Rectangle dimensions (borrowed): {} x {}", rect.width, rect.height);  
     }
     print_rectangle(&rect1); // passing a reference to the rectangle
+    // Adding Mutability to Structs
+    impl Rectangle {
+        fn scale(&mut self, factor: f64) {
+            self.width *= factor;
+            self.height *= factor;
+        }
+    }
+    let mut rect2: Rectangle = Rectangle { width: 4.0, height: 3.0 };
+    rect2.scale(2.0); // scaling the rectangle
+    println!("Scaled Rectangle dimensions: {} x {}", rect2.width, rect2.height);    
     // Enums with Ownership and Borrowinggit 
 }
