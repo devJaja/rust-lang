@@ -785,4 +785,8 @@ fn main() {
     }
     let rect1: Rectangle = Rectangle { width: 10.0, height: 5.0 }; // creating an instance of Rectangle
     println!("Rectangle dimensions: {} x {}", rect1.width, rect1.height);
+    // adding functionality to structs
+    impl Rectangle {
+        fn area(&self) -> f64 {
+            self.width * self.height
 }
