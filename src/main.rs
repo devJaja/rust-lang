@@ -1187,3 +1187,16 @@ fn main() {
 // pub(crate): makes an item accessible within the current crate
 // pub(super): makes an item accessible to the parent module
 // private (self): makes an item accessible only within the current module
+
+// making a struct public
+// making a struct public allows it to be accessed from other modules and crates
+// use the pub keyword before the struct definition
+// making a struct public does not automatically make its fields public
+// making a struct public also requires making its fields public if they need to be accessed
+// use pub before each field definition to make them public
+
+// enums and visibility
+// making an enum public allows it to be accessed from other modules and crates
+// use the pub keyword before the enum definition
+// making an enum public automatically makes its variants public
+// use visibility modifiers to control access to enum variants if needed
