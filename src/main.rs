@@ -1020,3 +1020,8 @@ fn main() {
     let num_ref: &i32 = &num; // reference to an i32
     let num_ref_as_u32: &u32 = num_ref as &u32; // casting reference to u32
     println!("Original number: {}, Casted number: {}", num, num_ref_as_u32);
+    // casting references is useful when you need to work with different types in a type-safe manner
+    // always ensure that the cast is valid to avoid runtime errors
+    // practice casting references to become comfortable with its usage in Rust programming
+    // casting between references 
+    // casting between references is allowed when the underlying data types are compatible
