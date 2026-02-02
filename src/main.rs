@@ -1033,3 +1033,7 @@ fn main() {
     // casting from mutable to immutable references is allowed
     let value2_ref_as_immut: &i32 = value2_ref as &i32; // casting to immutable reference
     println!("Value2: {}", value2);
+
+    // Assignment of references
+    // assignment of references is the process of assigning a reference to another reference variable
+    let mut x: i32 = 10;
