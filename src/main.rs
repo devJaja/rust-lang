@@ -1066,4 +1066,21 @@ fn main() {
             self.owner = new_owner;
             self
         }
+        fn balance(&self) -> f64 {
+            println!("Balance for {}: {}", self.owner, self.balance);
+            self.balance
+        }
+        fn deposit (mut self, amount: f64) -> Self {
+            self.balance += amount;
+            self
+        }
+        fn withdraw (&mut self, amount: f64) -> &mut Self {
+            if amount > self.balance {
+                self.balance -= amount;
+                println!("Withdrawn {} from {}", amount, self.owner);
+                return self;
+            } else {
+                println!("Insufficient funds for {}", self.owner);
+            }
+        }
     }
