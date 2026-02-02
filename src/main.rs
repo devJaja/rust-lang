@@ -1016,3 +1016,7 @@ fn main() {
     // casting references
     // casting references is the process of converting a reference of one type to a reference of another type
     // this is done using the 'as' keyword
+    let num: i32 = 42;
+    let num_ref: &i32 = &num; // reference to an i32
+    let num_ref_as_u32: &u32 = num_ref as &u32; // casting reference to u32
+    println!("Original number: {}, Casted number: {}", num, num_ref_as_u32);
