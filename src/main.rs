@@ -1088,49 +1088,49 @@
 // //     }
 
 // //     // method chaining depending on the self type
-// struct BankAccount {
-//     balance: f64,
-//     owner: String,
-// }
+struct BankAccount {
+    balance: f64,
+    owner: String,
+}
 
-// impl BankAccount {
-//     fn new(owner: String, initial_balance: f64) -> Self {
-//         BankAccount {
-//             balance: initial_balance,
-//             owner,
-//         }
-//     }
-//     fn change_owner(mut self, new_owner: String) -> Self {
-//         self.owner = new_owner;
-//         self
-//     }
-//     fn balance(&self) -> f64 {
-//         println!("Balance for {}: {}", self.owner, self.balance);
-//         self.balance
-//     }
-//     fn deposit (mut self, amount: f64) -> Self {
-//         self.balance += amount;
-//         self
-//     }
-//     fn withdraw (&mut self, amount: f64) -> &mut Self {
-//         if amount > self.balance {
-//             self.balance -= amount;
-//             println!("Withdrawn {} from {}", amount, self.owner);
+impl BankAccount {
+    fn new(owner: String, initial_balance: f64) -> Self {
+        BankAccount {
+            balance: initial_balance,
+            owner,
+        }
+    }
+    fn change_owner(mut self, new_owner: String) -> Self {
+        self.owner = new_owner;
+        self
+    }
+    fn balance(&self) -> f64 {
+        println!("Balance for {}: {}", self.owner, self.balance);
+        self.balance
+    }
+    fn deposit (mut self, amount: f64) -> Self {
+        self.balance += amount;
+        self
+    }
+    fn withdraw (&mut self, amount: f64) -> &mut Self {
+        if amount > self.balance {
+            self.balance -= amount;
+            println!("Withdrawn {} from {}", amount, self.owner);
            
-//         } else {
-//             println!("Insufficient funds for {}", self.owner);
-//         }
-//         self
-//     }
-// }
+        } else {
+            println!("Insufficient funds for {}", self.owner);
+        }
+        self
+    }
+}
 
-// fn main() {
-//     println!("Bank Account Example {}", BankAccount::new(String::from("Alice"), 1000.0)
-//         .deposit(500.0)
-//         .change_owner(String::from("Bob"))
-//         .balance()
-//     );
-// }
+fn main() {
+    println!("Bank Account Example {}", BankAccount::new(String::from("Alice"), 1000.0)
+        .deposit(500.0)
+        .change_owner(String::from("Bob"))
+        .balance()
+    );
+}
 
 // method chaining: depend on each method receiving self, &self, or &mut self
 // - methods that take self can be chained directly since they consume the instance and return a new one
@@ -1147,3 +1147,27 @@
 //         .balance()
 //     );
 // } 
+
+// destructure structs
+//  destructuring structs allows you to extract individual fields from a struct instance
+//  destructuring is done using pattern matching syntax
+//  destructuring can be done in let statements, function parameters, and match arms
+//  here is an example of destructuring a struct
+//  struct Point {
+//      x: f64,
+//      y: f64,
+//  }
+//  let p: Point = Point { x: 3.0, y: 4.0 };
+//  let Point { x: a, y: b } = p; // destructuring the struct
+//  println!("x: {}, y: {}", a, b); 
+
+// code organization
+// code organization is important for maintaining and scaling Rust projects
+// common code organization techniques include modules, crates, and packages
+// modules are used to group related code together
+// crates are the compilation units in Rust
+// packages are collections of crates
+// use the mod keyword to define modules
+// use the use keyword to bring modules into scope
+// organize code into separate files for better maintainability
+// follow Rust's module system conventions for file and directory structure
