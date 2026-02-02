@@ -1025,3 +1025,11 @@ fn main() {
     // practice casting references to become comfortable with its usage in Rust programming
     // casting between references 
     // casting between references is allowed when the underlying data types are compatible
+    // casting between immutable and mutable references
+    // casting from immutable to mutable references is not allowed
+    let mut value2: i32 = 100;
+    let value2_ref: &i32 = &value2; // immutable reference
+    // let value2_ref_as_mut: &mut i32 = value2_ref as &mut i32; // this line would cause a compile-time error
+    // casting from mutable to immutable references is allowed
+    let value2_ref_as_immut: &i32 = value2_ref as &i32; // casting to immutable reference
+    println!("Value2: {}", value2);
