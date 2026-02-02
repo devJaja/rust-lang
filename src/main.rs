@@ -1171,3 +1171,19 @@ fn main() {
 // use the use keyword to bring modules into scope
 // organize code into separate files for better maintainability
 // follow Rust's module system conventions for file and directory structure
+
+// Visibility and Privacy
+// visibility and privacy control access to items in Rust
+// by default, items are private to the module they are defined in
+// use the pub keyword to make items public
+// control visibility at the module level using pub(crate) and pub(super)
+// use visibility modifiers to encapsulate implementation details
+// maintain a clear public API for your modules and crates
+// document public items using Rustdoc comments
+// follow best practices for visibility to ensure code safety and maintainability
+
+// visibility specifiers
+// pub: makes an item public and accessible from other modules and crates
+// pub(crate): makes an item accessible within the current crate
+// pub(super): makes an item accessible to the parent module
+// private (self): makes an item accessible only within the current module
