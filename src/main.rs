@@ -1011,4 +1011,8 @@ fn main() {
         6 => println!("Saturday"),
         7 => println!("Sunday"),
         _ => println!("Invalid day"), // wildcard pattern for unmatched cases
-    }    
+    }  
+    
+    // casting references
+    // casting references is the process of converting a reference of one type to a reference of another type
+    // this is done using the 'as' keyword
