@@ -1037,3 +1037,33 @@ fn main() {
     // Assignment of references
     // assignment of references is the process of assigning a reference to another reference variable
     let mut x: i32 = 10;
+
+    struct Person {
+        name: String,
+        age: u32,
+    }
+
+    let person1 = Person {
+        name: String::from("Alice"),
+        age: 30,
+    };
+
+    // method chaining
+    // method chaining is a technique where multiple method calls are chained together in a single expression
+    struct BankAccount {
+        balance: f64,
+        owner: String,
+    }
+
+    impl BankAccount {
+        fn new(owner: String, initial_balance: f64) -> Self {
+            BankAccount {
+                balance: initial_balance,
+                owner,
+            }
+        }
+        fn change_owner(mut self, new_owner: String) -> Self {
+            self.owner = new_owner;
+            self
+        }
+    }
