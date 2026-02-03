@@ -1251,3 +1251,10 @@ fn main() {
 // keep dependencies up to date using cargo update
 // be mindful of dependency bloat and only include necessary crates
 // read the documentation of external crates to understand their usage and features
+// e.g:
+// use rand::Rng; // bringing the Rng trait into scope from the rand crate
+// fn main() {
+//     let mut rng = rand::thread_rng(); // creating a random number generator
+//     let random_number: u32 = rng.gen_range(1..=100); // generating a random number between 1 and 100
+//     println!("Random number: {}", random_number);
+// }
