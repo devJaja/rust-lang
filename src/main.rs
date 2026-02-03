@@ -1200,3 +1200,54 @@ fn main() {
 // use the pub keyword before the enum definition
 // making an enum public automatically makes its variants public
 // use visibility modifiers to control access to enum variants if needed
+
+// a common pattern is to have a public struct with private fields and provide public methods for accessing and modifying those fields
+// this encapsulation helps maintain invariants and control how the data is accessed and modified
+// a common instance is to create sreuct with private fields and provide public getter and setter methods
+
+
+// Bank
+// struct Wallet {
+//     owner: String,
+//     balance: f64,
+// }
+
+// impl Wallet {
+//     fn new(owner: String, initial_balance: f64) -> Self {
+//         Wallet {
+//             owner,
+//             balance: initial_balance,
+//         }
+//     }
+
+//     fn deposit(amount: f64) {
+//         self.balance += amount;
+//         println!("Deposited {} into {}'s wallet", amount, self.owner);
+//     }
+//     fn withdraw(amount: f64) {
+//         if amount <= self.balance {
+//             self.balance -= amount;
+//             println!("Withdrew {} from {}'s wallet", amount, self.owner);
+//         } else {
+//             println!("Insufficient funds in {}'s wallet", self.owner);
+//         }
+//     }
+// }
+
+// fn main() {
+//     let mut my_wallet = Wallet::new(String::from("Alice"), 100.0);
+//     my_wallet.deposit(50.0);
+//     my_wallet.withdraw(30.0);
+// }
+
+// external dependencies
+// external dependencies are libraries or crates that are not part of the Rust standard library
+// use the Cargo package manager to manage external dependencies
+// add dependencies to the Cargo.toml file under the [dependencies] section
+// specify the crate name and version
+// use the extern crate keyword to bring external crates into scope (not needed in 2018 edition and later)
+// use the use keyword to bring specific items from external crates into scope
+// manage dependency versions using semantic versioning
+// keep dependencies up to date using cargo update
+// be mindful of dependency bloat and only include necessary crates
+// read the documentation of external crates to understand their usage and features
