@@ -1277,3 +1277,30 @@ fn main() {
 // use assertions to verify expected outcomes using macros like assert!, assert_eq!, and assert_ne!
 // run tests using the cargo test command
 // organize tests into unit tests and integration tests
+// unit tests are small tests that focus on individual functions or modules
+// integration tests test the interaction between multiple components of the code
+// use test fixtures to set up common test data and state
+// mock external dependencies to isolate tests and control behavior
+// use code coverage tools to measure test coverage and identify untested code paths
+// follow best practices for writing clear and maintainable tests
+// fn add(a: i32, b: i32) -> i32 {
+//     a + b
+// }    
+// #[cfg(test)]
+// mod tests {
+//     use super::*; // bring the outer scope into the test module  
+//     #[test]
+//     fn test_add() {
+//         let result: i32 = add(2, 3);
+//         assert_eq!(result, 5); // assert that the result is equal to 5
+//     }
+// }
+//     #[test]
+//     fn test_method_chaining() {
+//         let account: BankAccount = BankAccount::new(String::from("Charlie"), 2000.0)
+//             .deposit(300.0)
+//             .change_owner(String::from("Dave"));
+//         assert_eq!(account.owner, "Dave");
+//         assert_eq!(account.balance, 2300.0);
+//     }
+// }
