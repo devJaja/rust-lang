@@ -1258,3 +1258,13 @@ fn main() {
 //     let random_number: u32 = rng.gen_range(1..=100); // generating a random number between 1 and 100
 //     println!("Random number: {}", random_number);
 // }
+
+// Publishing your crate
+// publishing your crate allows others to use it in their projects
+// use the cargo publish command to publish your crate to crates.io
+// ensure your crate has a unique name and a valid version number
+// include a README.md file with documentation for your crate
+// include a LICENSE file to specify the license for your crate
+// write comprehensive documentation using Rustdoc comments
+// test your crate thoroughly before publishing
+// maintain your crate by fixing bugs and adding features based on user feedback    
