@@ -1327,3 +1327,8 @@ fn main() {
 // unit test
 // cargo test --lib
 // cargo test --lib --show-output
+
+// ignore test
+// test ignored with #[ignore] attribute
+// test ignored with cargo test -- --ignored
+// test only ignored tests with cargo test -- --ignored
