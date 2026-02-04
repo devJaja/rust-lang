@@ -1332,3 +1332,14 @@ fn main() {
 // test ignored with #[ignore] attribute
 // test ignored with cargo test -- --ignored
 // test only ignored tests with cargo test -- --ignored
+// imtegration test
+// integration tests are placed in the tests directory
+// each file in the tests directory is a separate crate
+// use the #[test] attribute to mark functions as test cases
+// use the assert! and assert_eq! macros to verify expected outcomes
+// run integration tests using the cargo test command
+// use the use keyword to bring items from the main crate into scope
+// use test fixtures to set up common test data and state
+// mock external dependencies to isolate tests and control behavior
+// follow best practices for writing clear and maintainable integration tests
+// #[cfg(test)]
