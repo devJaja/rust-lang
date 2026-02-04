@@ -1304,3 +1304,21 @@ fn main() {
 //         assert_eq!(account.balance, 2300.0);
 //     }
 // }
+
+// panics and error handling
+// panics occur when the program encounters an unrecoverable error
+// use the panic! macro to trigger a panic
+// panics unwind the stack and terminate the program by default
+// use the std::panic module to customize panic behavior
+// handle recoverable errors using the Result enum
+// use the ? operator to propagate errors easily
+// implement custom error types using the std::error::Error trait
+// log errors using the log crate for better debugging and monitoring
+// follow best practices for error handling to ensure robust and reliable code
+// fn divide(numerator: f64, denominator: f64) -> Result<f64, String> {
+//     if denominator == 0.0 {
+//         Err(String::from("Division by zero")) // return an error
+//     } else {
+//         Ok(numerator / denominator) // return the result
+//     }
+// }    
