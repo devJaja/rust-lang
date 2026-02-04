@@ -1268,3 +1268,12 @@ fn main() {
 // write comprehensive documentation using Rustdoc comments
 // test your crate thoroughly before publishing
 // maintain your crate by fixing bugs and adding features based on user feedback    
+
+// test in rust
+// testing is an essential part of software development to ensure code correctness and reliability
+// Rust provides a built-in testing framework that allows you to write and run tests easily
+// tests are defined in special test modules using the #[cfg(test)] attribute
+// use the #[test] attribute to mark functions as test cases    
+// use assertions to verify expected outcomes using macros like assert!, assert_eq!, and assert_ne!
+// run tests using the cargo test command
+// organize tests into unit tests and integration tests
