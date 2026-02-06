@@ -1088,49 +1088,49 @@
 // //     }
 
 // //     // method chaining depending on the self type
-struct BankAccount {
-    balance: f64,
-    owner: String,
-}
+// struct BankAccount {
+//     balance: f64,
+//     owner: String,
+// }
 
-impl BankAccount {
-    fn new(owner: String, initial_balance: f64) -> Self {
-        BankAccount {
-            balance: initial_balance,
-            owner,
-        }
-    }
-    fn change_owner(mut self, new_owner: String) -> Self {
-        self.owner = new_owner;
-        self
-    }
-    fn balance(&self) -> f64 {
-        println!("Balance for {}: {}", self.owner, self.balance);
-        self.balance
-    }
-    fn deposit (mut self, amount: f64) -> Self {
-        self.balance += amount;
-        self
-    }
-    fn withdraw (&mut self, amount: f64) -> &mut Self {
-        if amount > self.balance {
-            self.balance -= amount;
-            println!("Withdrawn {} from {}", amount, self.owner);
+// impl BankAccount {
+//     fn new(owner: String, initial_balance: f64) -> Self {
+//         BankAccount {
+//             balance: initial_balance,
+//             owner,
+//         }
+//     }
+//     fn change_owner(mut self, new_owner: String) -> Self {
+//         self.owner = new_owner;
+//         self
+//     }
+//     fn balance(&self) -> f64 {
+//         println!("Balance for {}: {}", self.owner, self.balance);
+//         self.balance
+//     }
+//     fn deposit (mut self, amount: f64) -> Self {
+//         self.balance += amount;
+//         self
+//     }
+//     fn withdraw (&mut self, amount: f64) -> &mut Self {
+//         if amount > self.balance {
+//             self.balance -= amount;
+//             println!("Withdrawn {} from {}", amount, self.owner);
            
-        } else {
-            println!("Insufficient funds for {}", self.owner);
-        }
-        self
-    }
-}
+//         } else {
+//             println!("Insufficient funds for {}", self.owner);
+//         }
+//         self
+//     }
+// }
 
-fn main() {
-    println!("Bank Account Example {}", BankAccount::new(String::from("Alice"), 1000.0)
-        .deposit(500.0)
-        .change_owner(String::from("Bob"))
-        .balance()
-    );
-}
+// fn main() {
+//     println!("Bank Account Example {}", BankAccount::new(String::from("Alice"), 1000.0)
+//         .deposit(500.0)
+//         .change_owner(String::from("Bob"))
+//         .balance()
+//     );
+// }
 
 // method chaining: depend on each method receiving self, &self, or &mut self
 // - methods that take self can be chained directly since they consume the instance and return a new one
@@ -1343,3 +1343,21 @@ fn main() {
 // mock external dependencies to isolate tests and control behavior
 // follow best practices for writing clear and maintainable integration tests
 // #[cfg(test)]
+
+
+fn main() {
+    let num: i32 = 42;
+    let num: i32 = 100;
+    let num: f32 = 58.0;
+
+    println!("The value of num is: {}", num);
+}
+
+// type aliases
+// type aliases allow you to create a new name for an existing type
+// use the type keyword to define a type alias
+// type aliases can improve code readability and maintainability
+// type aliases can be used to simplify complex types or to provide more meaningful names for types
+// type aliases can also be used to create new types that are based on existing types, such as using type aliases for Result and Option types to provide more context about the expected values
+// type aliases serves as nicknames for existing types, making code easier to read and understand
+// type aliases do not create new types, they simply provide an alternative name for an existing type
